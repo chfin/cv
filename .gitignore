@@ -1,0 +1,9 @@
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.log
+*.org
+*.out
+*.run.xml
+templates/

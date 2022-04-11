@@ -1,0 +1,395 @@
+\documentclass[10pt]{scrartcl}
+
+% page layout
+\usepackage[left=4cm,marginparwidth=3cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 1pt}
+\usepackage{multicol}
+
+\reversemarginpar
+\newcommand{\margintext}[1]{\marginpar{\raggedleft\itshape\small#1}}
+\newcommand{\entry}[1]{\vphantom{x}\margintext{#1}}
+
+% \raggedbottom
+\widowpenalties 1 10000 % prevents paragraph breaking
+% \clubpenalties 1 10000
+
+% font and styling
+\usepackage{fontspec}
+\usepackage{fourier-otf}
+\linespread{1.1} % some extra leading for utopia fonts
+\setmonofont{Fira Mono}[Scale=MatchLowercase]
+\addtokomafont{disposition}{\rmfamily\mdseries}
+\usepackage{microtype}
+\usepackage{academicons}
+\usepackage{fontawesome}
+\usepackage{csquotes}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  breaklinks,
+  colorlinks,
+  linkcolor=Maroon,
+  urlcolor=Maroon,
+}
+
+% references
+\usepackage[backend=biber,style=authoryear,isbn=false,firstinits=true,maxcitenames=20]{biblatex}
+\patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
+% \AtEveryBibitem{\clearfield{urlyear}}
+\addbibresource{publications.bib}
+
+\edef\authorhash{\detokenize{171275a917b0d3bc7583ce95db8c6663}}
+\renewcommand{\mkbibnamegiven}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnamefamily}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnameprefix}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnamesuffix}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+
+\DeclareFieldFormat{doi}{%
+  \aiDoi\space
+  \ifhyperref
+    {\href{https://doi.org/#1}{\nolinkurl{#1}}}
+    {\nolinkurl{#1}}%
+}
+\DeclareFieldFormat{url}{%
+  \faLink\space\url{#1}}
+
+\begin{document}
+
+\thispagestyle{empty}
+
+{\huge \textcolor{DimGray}{{{Christoph Finkensiep}}}}\\
+
+%\textit{PhD Candidate}
+
+\begin{minipage}[t]{0.6\linewidth}
+  Digital and Cognitive Musicology Lab (DCML)\\
+  École Polytechnique Fédérale de Lausanne\\
+  INN 115, Station 14\\
+  CH-1015, Lausanne\\
+  Switzerland
+\end{minipage}
+\begin{minipage}[t]{0.39\linewidth}
+  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:chfin@chfin.de}{chfin@chfin.de}\\
+  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:christoph.finkensiep@epfl.ch}{christoph.finkensiep@epfl.ch}\\
+  \parbox{1.2em}{\aiOrcidSquare} \href{https://orcid.org/0000-0002-7002-6586}{orcid.org/0000-0002-7002-6586}\\
+  \parbox{1.2em}{\faicon{github}} \href{https://github.com/chfin/}{github.com/chfin}\\
+  \parbox{1.2em}{\aiGoogleScholar} \href{https://scholar.google.com/citations?user=6m7SshUAAAAJ}{Christoph Finkensiep}\\
+\end{minipage}
+
+
+\section*{Education}
+
+\entry{since 2017}\textbf{PhD}\\
+Digital and Cognitive Musicology Lab (DCML)\\
+\textsc{École Polytechnique Fédérale de Lausanne}, Switzerland
+
+\entry{2014-2017}\textbf{M. Sc.} in Cognitive Science\\
+\textsc{University of Osnabrück}, Germany
+
+\entry{2010-2014}\textbf{B. Sc.} in Computer Science\\
+\textsc{University of Paderborn}, Germany
+
+\entry{Fall 2012}Exchange Semester\\
+\textsc{University of Helsinki}, Finland
+
+\entry{2010}\textbf{Abitur}\\
+\textsc{Gymnasium Horn-Bad Meinberg}, Germany
+
+\section*{Theses}
+
+% TODO: fix title
+\entry{2022}\enquote{Studies in Free Polyphony}\\
+\textit{PhD Thesis}\\
+Supervisor: Martin Rohrmeier (\textsc{EPFL})
+
+\entry{2017}\enquote{A Formal Model of Voice Leading}\\
+\textit{Master Thesis}\\
+Supervisors: Kai-Uwe Kühnberger (University of Osnabrück), Martin Rohrmeier (TU Dresden)
+
+\entry{2014}\enquote{Fast and Flexible Automatic Composition of Semantic Web Services}\\
+\textit{Bachelor Thesis}\\
+Supervisor: Hans Kleine Büning (University of Paderborn)
+
+\section*{Employment}
+
+\entry{2017-present}\textsc{École Polytechnique Fédérale de Lausanne}\\*
+Doctoral Assistant\\
+\textit{Digital and Cognitive Musicology Lab}
+
+\entry{2017}\textsc{Technical University Dresden}\\
+Student Assistant\\
+\textit{Dresden Music Cognition Lab}
+
+\entry{2015-2017}\textsc{Protestant Church of Ladbergen}\\
+Director of Brass Ensemble
+
+\entry{2013-2014}\textsc{University of Paderborn}\\
+Teaching Assistant \textit{Introduction to Programming for Engineers}
+
+\entry{2011-12}\textsc{University of Paderborn}\\
+Student Assistant\\
+\textit{Decision Support \& Operations Research Lab}
+
+% \entry{2011-12}{\textsc{Gymnasium Horn-Bad Meinberg}}\\
+% Instructor for student club on PHP programming
+
+\section*{Publications}
+
+\subsection*{Articles, Conference Papers, and Book Chapters}
+
+\entry{forthcoming}%
+\fullcite{FinkensiepChordTypesOrnamentationinpreparation}
+
+\fullcite{CecchettiHearingfunctionalharmonyinreview}
+
+\fullcite{FinkensiepMusicTheoryModelDrivensubmitted}
+
+\entry{2021}%
+\fullcite{FinkensiepModelingInferringProtoVoice2021}
+
+\fullcite{HerffHierarchicalsyntacticstructure2021}
+
+\fullcite{HarasimMusicCognitionComplexity2021}
+
+\entry{2020}%
+\fullcite{FinkensiepVoiceLeadingSchemaRecognition2020}
+
+\fullcite{HarasimJazzHarmonyTreebank2020}
+
+\fullcite{Cecchettiexperiencemusicalstructure2020}
+
+\entry{2019}%
+\fullcite{FinkensiepModellingSyntaxNorth2019}
+
+\entry{2018}%
+\fullcite{FinkensiepGeneralizedSkipgramsPattern2018}
+
+\subsection*{Talks and Presentations}
+
+\newcommand{\invited}[0]{\faCommentO\ }
+\newcommand{\contrib}[0]{\faCommentsO\ }
+\newcommand{\poster}[0]{\faFileO\ }
+\newcommand{\talkdate}[1]{\hfill #1}
+
+(\invited = invited talk, \contrib = contributed talk, \poster = poster)
+
+\entry{2021}%
+\contrib \poster \enquote{Modeling and Inferring Proto-Voice Structure in Free Polyphony}
+\talkdate{November 8-12, 2021}\\
+\textit{ISMIR 2021}, online
+
+\contrib \enquote{Modeling Hierarchical Structure at the Note Level}
+\talkdate{July 29, 2021}\\
+\textit{CogSci 2021}, online\\
+In symposium: \enquote{Music Cognition: The Complexity of Musical Structure}
+
+\entry{2020}%
+\contrib \poster \enquote{Voice-Leading Schema Recognition}
+\talkdate{October 12-16, 2020}\\
+\textit{ISMIR 2020}, online
+
+\entry{2019}%
+\contrib \poster \enquote{A Graph Grammar for North Indian Melodies}
+\talkdate{November 6, 2019}\\
+\textit{ISMIR 2019}\\
+% November 4-8, 2019,
+Delft, The Netherlands
+
+\invited \enquote{A Graph Representation of Hierarchical Voice-Leading}
+\talkdate{July 2, 2019}\\
+Workshop: \enquote{Corpus Research as a Means of Unlocking Musical Grammar}\\
+\textsc{University of Tel-Aviv \& Bar-Ilan University}\\
+% July 1-4, 2019,
+Tel Aviv, Israel
+
+\poster \enquote{Representing Hierarchical Voice-Leading Structure with Graph Transformations}\\
+\textit{SEMPRE Graduate Conference 2019}\talkdate{March 25, 2019}\\
+% March 25-26, 2019,
+Cambridge, UK
+
+\contrib \enquote{Schema Matching}
+\talkdate{February 21, 2019}\\
+\textit{Mixed Methods in Digital Humanities} mid-term meeting, Volkswagen Foundation\\
+% February 21-22, 2019,
+Hildesheim, Germany
+
+\invited \enquote{Schema Matching mit Skipgrams}
+\talkdate{February 20, 2019}\\
+\textsc{Hochschule für Musik Freiburg}\\
+Freiburg, Germany
+
+\entry{2018}%
+\contrib \poster \enquote{Generalized Skipgrams}
+\talkdate{September 26, 2018}\\
+\textit{ISMIR 2018}\\
+Paris, France
+
+\invited \enquote{Schema Matching with Skipgrams}
+\talkdate{September 19, 2018}\\
+\textit{DCML Workshop 2018}\\
+\textsc{École Polytechnique Fédérale de Lausanne}\\
+Lausanne, Switzerland
+
+\invited \enquote{Formalisierung in der Musiktheorie}
+\talkdate{June 14, 2018}\\
+\textsc{University of Music and Performing Arts Mannheim}\\
+Mannheim, Germany
+
+\entry{2017}%
+\invited \enquote{Formalizing Four-Part Voice Leading Rules}
+\talkdate{January 17, 2017}\\
+\textsc{Technical University Dresden}\\
+Dresden, Germany
+
+\subsection*{Open Source Code}
+
+\newcommand{\codelink}[1]{\faCodeFork\ \href{https://#1}{\nolinkurl{#1}}}
+\newcommand{\ghlink}[1]{\faGithub\ \href{https://github.com/#1}{\nolinkurl{#1}}}
+
+Implementation of the Protovoice Model (Haskell)\\
+\ghlink{DCMLab/protovoices-haskell}
+
+Annotation Tool for Protovoice Analyses (PureScript)\\
+\ghlink{DCMLab/protovoice-annotation-tool}
+
+Annotation Tool for Voice-Leading Schemata (ClojureScript)\\
+\ghlink{DCMLab/schema_annotation_app}
+
+Annotation Tool for Tree Analyses (ClojureScript)\\
+\ghlink{DCMLab/tree-annotation-code}
+
+Matcher for Voice-Leading Schemata (Julia)\\
+\ghlink{DCMLab/schemata_code/tree/ismir2020}
+
+Libraries for Musical Pitches and Intervals
+\begin{itemize}
+\item \texttt{musicology-pitch} (Haskell)\\
+  \ghlink{DCMLab/haskell-musicology/tree/master/musicology-pitch}
+\item \texttt{pitchtypes} (Python)\\
+  \ghlink{DCMLab/pitchtypes}
+\item \texttt{Pitches.jl} (Julia)\\
+  \ghlink{DCMLab/Pitches.jl}
+\item \texttt{purescript-pitches} (PureScript)\\
+  \ghlink{DCMLab/purescript-pitches}
+\item \texttt{pitches} (Rust)\\
+  \ghlink{DCMLab/rust-pitches}
+\end{itemize}
+
+\section*{Teaching}
+
+\entry{2018-2021}%
+Supervision of Student Projects
+
+\entry{Spring 2019 \& 2020}%
+Teaching Assistant: \enquote{Digital Musicology}\\
+Master Course, \textsc{EPFL}
+
+\entry{Spring 2019 \& 2020}%
+Co-Lecturerer: \enquote{Musical Improvisation, Invention and Creativity}\\
+Bachelor Course, \textsc{EPFL}
+
+\entry{2019}%
+Teaching Assistant: \enquote{Music, Musical Structure, Artificial Neural Networks, and the Mind}\\
+Summer School, Magliaso, Switzerland
+
+\entry{Winter 2013/14}%
+Teaching Assistant: \enquote{Introdcution to Programming for Engineers}\\
+Bachelor Course, \textsc{University of Paderborn}
+
+\section*{Reviewer Activity}
+
+\entry{Conferences}%
+ISMIR
+
+\entry{Journals}%
+Music Theory and Analysis (MTA)
+
+\section*{Scholarships and Awards}
+
+\entry{2021}%
+Best Reviewer Award, \textit{ISMIR 2021}
+
+\entry{2010-2017}%
+Student Scholarship, \textit{German Academic Scholarship Foundation}
+
+\entry{2012}%
+ERASMUS Scholarship (exchange semester), \textit{European Union}
+
+\entry{2011}%
+3rd Place for Task 2, \textit{Data Mining Cup}
+
+\section*{Memberships and Responsibilities}
+
+\entry{2019-2021}%
+Student Representative\\
+\textit{Doctoral School of Digital Humanities}, \textsc{EPFL}
+
+\entry{2013-2014}%
+Student Represtenative\\
+\textit{German Academic Scholarship Foundation}, \textsc{University of Paderborn}
+
+\entry{since 2021}%
+Member of the \textit{Cognitive Science Society}
+
+\entry{since 2019}%
+Member of the \textit{UNIL-EPFL dhCenter}
+
+\entry{since 2018}%
+Member of the \textit{International Society for Music Information Retrieval (ISMIR)}
+
+\section*{Skills}
+
+\subsection*{Languages}
+
+\entry{German}native speaker
+
+\entry{English}fluent
+
+\entry{French}basic skills
+
+\subsection*{Computing}
+
+\entry{Programming Languages}%
+Haskell, Python, Julia, PureScript, Clojure/ClojureScript, Common Lisp,
+JavaScript, Rust, Java, C/C++, PHP
+
+\entry{Frameworks/Libraries}%
+numpy, pandas, PyTorch, halogen, monad transformers, probabilistic programming (pyro, Haskell)
+
+\entry{Markup Languages}%
+\LaTeX, HTML/CSS, LilyPond
+
+\subsection*{Music}
+
+\entry{since 1998}%
+Trombone\\
+10 years of lessons, including university level\\
+Experience in various jazz and classical ensembles, solo literature
+\begin{itemize}
+\item Minor during Bachelor (2011-2014)
+\item Musikakademie, German Academic Scholarship Foundation\\ (bass trombone, 2012-14, 2016-17)
+\item Landesjugendposaunenchor Westfalen Lippe (lead trombone, 2013-2019)
+\item Big Band Hochschule Osnabrück, Jazz Department (bass trombone, 2014-2015)
+\end{itemize}
+
+\entry{since 2001}%
+Piano
+
+% TODO find year
+\entry{since 2007}%
+Conducting (brass ensemble)
+% TODO: include D-certificate
+
+\entry{since 2013}%
+Choir Singing
+
+\end{document}
+%%% Local Variables:
+%%% TeX-engine: luatex
+%%% End:
