@@ -7,12 +7,8 @@
 \usepackage{multicol}
 
 \reversemarginpar
-\newcommand{\margintext}[1]{\marginpar{\raggedleft\itshape\small#1}}
+\newcommand{\margintext}[1]{\marginpar{\raggedleft\small#1}}
 \newcommand{\entry}[1]{\vphantom{x}\margintext{#1}}
-
-% \raggedbottom
-\widowpenalties 1 10000 % prevents paragraph breaking
-% \clubpenalties 1 10000
 
 % font and styling
 \usepackage{fontspec}
@@ -24,6 +20,7 @@
 \usepackage{academicons}
 \usepackage{fontawesome}
 \usepackage{csquotes}
+\usepackage[all]{nowidow}
 
 \usepackage[svgnames]{xcolor}
 \usepackage{hyperref}
@@ -61,6 +58,11 @@
 
 \begin{document}
 
+% \raggedbottom
+% \widowpenalties 1 10000 % prevents paragraph breaking
+% \clubpenalties 1 10000
+
+
 \thispagestyle{empty}
 
 {\huge \textcolor{DimGray}{{{Christoph Finkensiep}}}}\\
@@ -68,15 +70,14 @@
 %\textit{PhD Candidate}
 
 \begin{minipage}[t]{0.6\linewidth}
-  Digital and Cognitive Musicology Lab (DCML)\\
-  École Polytechnique Fédérale de Lausanne\\
-  INN 115, Station 14\\
-  CH-1015, Lausanne\\
-  Switzerland
+  Institute for Logic, Language and Computation (ILLC)\\
+  Faculty of Humanities\\
+  University of Amsterdam\\
+  The Netherlands
 \end{minipage}
 \begin{minipage}[t]{0.39\linewidth}
-  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:chfin@chfin.de}{chfin@chfin.de}\\
-  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:christoph.finkensiep@epfl.ch}{christoph.finkensiep@epfl.ch}\\
+  % \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:chfin@chfin.de}{chfin@chfin.de}\\
+  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:c.finkensiep@uva.nl}{c.finkensiep@uva.nl}\\
   \parbox{1.2em}{\aiOrcidSquare} \href{https://orcid.org/0000-0002-7002-6586}{orcid.org/0000-0002-7002-6586}\\
   \parbox{1.2em}{\faicon{github}} \href{https://github.com/chfin/}{github.com/chfin}\\
   \parbox{1.2em}{\aiGoogleScholar} \href{https://scholar.google.com/citations?user=6m7SshUAAAAJ}{Christoph Finkensiep}\\
@@ -85,14 +86,14 @@
 
 \section*{Education}
 
-\entry{2017-2022}\textbf{PhD}\\
+\entry{2017--2023}\textbf{PhD}\\
 Digital and Cognitive Musicology Lab (DCML)\\
 \textsc{École Polytechnique Fédérale de Lausanne}, Switzerland
 
-\entry{2014-2017}\textbf{M. Sc.} in Cognitive Science\\
+\entry{2014--2017}\textbf{M. Sc.} in Cognitive Science\\
 \textsc{University of Osnabrück}, Germany
 
-\entry{2010-2014}\textbf{B. Sc.} in Computer Science\\
+\entry{2010--2014}\textbf{B. Sc.} in Computer Science\\
 \textsc{University of Paderborn}, Germany
 
 \entry{Fall 2012}Exchange Semester\\
@@ -103,7 +104,6 @@ Digital and Cognitive Musicology Lab (DCML)\\
 
 \section*{Theses}
 
-% TODO: fix title
 \entry{2022}\enquote{The Structure of Free Polyphony}\\
 \textit{PhD Thesis}\\
 Supervisor: Martin Rohrmeier (\textsc{EPFL})
@@ -120,36 +120,48 @@ Supervisor: Hans Kleine Büning (\textsc{University of Paderborn})
 
 \section*{Employment}
 
-\entry{since 2017}\textsc{École Polytechnique Fédérale de Lausanne}\\*
-Doctoral Assistant\\
+\entry{since 2023}\textsc{University of Amsterdam}\\
+Assistant Professor in Generative AI in the Arts\\
+\textit{Institute for Logic, Language and Computation; Faculty of Humanities}
+
+\textsc{École Polytechnique Fédérale de Lausanne}\\
+\entry{2022--2023}Postdoctoral Researcher\\
+\entry{2017--2022}Doctoral Assistant\\
 \textit{Digital and Cognitive Musicology Lab}
+
+% \textsc{École Polytechnique Fédérale de Lausanne}\\
+% \textit{Digital and Cognitive Musicology Lab}
 
 \entry{2017}\textsc{Technical University Dresden}\\
 Student Assistant\\
 \textit{Dresden Music Cognition Lab}
 
-\entry{2015-2017}\textsc{Protestant Church of Ladbergen}\\
+\entry{2015--2017}\textsc{Protestant Church of Ladbergen}\\
 Director of Brass Ensemble
 
-\entry{2013-2014}\textsc{University of Paderborn}\\
+\entry{2013--2014}\textsc{University of Paderborn}\\
 Teaching Assistant \textit{Introduction to Programming for Engineers}
 
-\entry{2011-12}\textsc{University of Paderborn}\\
+\entry{2011--12}\textsc{University of Paderborn}\\
 Student Assistant\\
 \textit{Decision Support \& Operations Research Lab}
 
-% \entry{2011-12}{\textsc{Gymnasium Horn-Bad Meinberg}}\\
+% \entry{2011--12}{\textsc{Gymnasium Horn-Bad Meinberg}}\\
 % Instructor for student club on PHP programming
 
 \section*{Teaching Experience}
 
 \subsection*{Student Supervision}
 
-\entry{since 2022}%
-Voice-Leading Reduction to Harmonic Entities through Heuristic Search\\
+\entry{since 2023}%
+Latent Spaces of Music -- Master thesis, \textsc{ETH Zürich}\\
+\entry{2022--2023}%
+Voice-Leading Reduction to Harmonic Entities through Heuristic Search\\*
 Bachelor thesis, \textsc{University of Cambridge}\\
-\entry{since 2022}%
+\entry{2022--2023}%
 Harmonic Reduction based on Reinforcement Learning -- Master project, \textsc{EPFL}\\
+\entry{2022}%
+Composer Classification from Scores -- course project, \textsc{EPFL}\\
 \entry{2020}%
 Exploring Mutual Information Decay in Musical Sequences -- Master project, \textsc{EPFL}\\
 \entry{2018}%
@@ -159,20 +171,20 @@ A MusicXML Parser for Julia -- student project, \textsc{EPFL}
 
 \subsection*{Courses}
 
-\entry{Spring\\ 2019 \& 2020}%
-\enquote{Musical Improvisation, Invention and Creativity} -- lectures and supervision\\
+\entry{Spring\\ 2019, 20, 23}%
+\enquote{Musical Improvisation, Invention and Creativity} -- lectures and project supervision\\*
 Bachelor Course, \textsc{EPFL}
 
-\entry{Spring\\ 2019 \& 2020}%
-\enquote{Digital Musicology} -- tutorials and project supervision\\
+\entry{Spring\\ 2019, 20, 23}%
+\enquote{Digital Musicology} -- tutorials, project supervision, lectures\\*
 Master Course, \textsc{EPFL}
 
-\entry{2019}%
-\enquote{Music, Musical Structure, Artificial Neural Networks, and the Mind} -- tutorials\\
+\entry{2019\nopagebreak}\nopagebreak%
+\enquote{Music, Musical Structure, Artificial Neural Networks, and the Mind} -- tutorials\\\nopagebreak
 Summer School of the \textsc{Swiss Study Foundation}, Magliaso, Switzerland
 
 \entry{Winter 2013/14}%
-\enquote{Introdcution to Programming for Engineers} -- tutorials\\
+\enquote{Introduction to Programming for Engineers} -- tutorials\\*
 Bachelor Course, \textsc{University of Paderborn}
 
 \section*{Publications}
@@ -180,9 +192,13 @@ Bachelor Course, \textsc{University of Paderborn}
 \subsection*{Articles, Conference Papers, and Book Chapters}
 
 \entry{forthcoming}%
-\fullcite{FinkensiepChordTypesOrnamentationinpreparation}
+\fullcite{FinkensiepRepetitionStructureInferenceFormalinpress}
+
+\fullcite{NeuwirthMusicalSchemataModellinginpress}
 
 \fullcite{FinkensiepMusicTheoryModelDrivenaccepted}
+
+\fullcite{FinkensiepChordTypesOrnamentationsubmitted}
 
 \fullcite{FinkensiepModelingMelodyIndiansubmitted}
 
@@ -218,6 +234,21 @@ Bachelor Course, \textsc{University of Paderborn}
 
 (\invited = invited talk, \contrib = conference talk, \poster = poster)
 
+\entry{2023}%
+\contrib Symposium \enquote{Music Cognition between Theory and Experiment}
+\talkdate{July 26--29, 2023}\\
+(\textbf{co-organized} with Gabriele Cecchetti and Xinyi Guan)\\
+\textit{CogSci 2023}, Sydney, Australia
+
+\poster \enquote{Note Structure in Free Polyphony}
+\talkdate{June 22--24, 2023}\\
+International Colloquium of Computational and Cognitive Musicology 2023\\
+\textsc{National and Kapodistrian University of Athens}, Greece
+
+\invited \enquote{Seeing the Wood for the Trees -- Note-Level Structure in Tonal Music}
+\talkdate{May 2, 2023}\\
+\textsc{Queen Mary University of London}, United Kingdom
+
 \entry{2022}%
 \invited \enquote{Can Machines be Creative?}
 \talkdate{Nov. 23, 2022}\\
@@ -233,7 +264,7 @@ Salzburg, Austria
 
 \entry{2021}%
 \contrib \poster \enquote{Modeling and Inferring Proto-Voice Structure in Free Polyphony}
-\talkdate{Nov. 8-12, 2021}\\
+\talkdate{Nov. 8--12, 2021}\\
 \textit{ISMIR 2021}, online
 
 \contrib \enquote{Modeling Hierarchical Structure at the Note Level}
@@ -244,14 +275,14 @@ in symposium: \enquote{Music Cognition: The Complexity of Musical Structure}\\
 
 \entry{2020}%
 \contrib \poster \enquote{Voice-Leading Schema Recognition}
-\talkdate{Oct. 12-16, 2020}\\
+\talkdate{Oct. 12--16, 2020}\\
 \textit{ISMIR 2020}, online
 
 \entry{2019}%
 \contrib \poster \enquote{A Graph Grammar for North Indian Melodies}
 \talkdate{Nov. 6, 2019}\\
 \textit{ISMIR 2019}\\
-% November 4-8, 2019,
+% November 4--8, 2019,
 Delft, The Netherlands
 
 \invited \enquote{A Graph Representation of Hierarchical Voice-Leading}
@@ -261,14 +292,14 @@ Delft, The Netherlands
 
 \poster \enquote{Representing Hierarchical Voice-Leading Structure with Graph Transformations}\\
 \textit{SEMPRE Graduate Conference 2019}\talkdate{Mar. 25, 2019}\\
-% March 25-26, 2019,
+% March 25--26, 2019,
 Cambridge, UK
 
 \contrib \enquote{From Bach to the Beatles}
 \talkdate{Feb. 21, 2019}\\
 with Markus Neuwirth \& Martin Rohrmeier\\
 \textit{\enquote{Mixed Methods} in the Humanities} mid-term meeting, Volkswagen Foundation\\
-% February 21-22, 2019,
+% February 21--22, 2019,
 Hildesheim, Germany
 
 \invited \enquote{Schema Matching mit Skipgrams}
@@ -287,7 +318,7 @@ Paris, France
 \textsc{École Polytechnique Fédérale de Lausanne}, Switzerland
 
 \invited \enquote{Digitale Musikforschung: Projekte und Fallstudien}
-\talkdate{June 14-15, 2018}\\
+\talkdate{June 14--15, 2018}\\
 with Markus Neuwirth\\
 \textsc{University of Music and Performing Arts Mannheim}, Germany
 
@@ -336,14 +367,14 @@ Libraries for Musical Pitches and Intervals
 ISMIR
 
 \entry{Journals}%
-Music Theory and Analysis (MTA), TISMIR
+Music Theory and Analysis (MTA), TISMIR, Advances in Data Analysis and Classification (ADAC)
 
 \section*{Scholarships and Awards}
 
 \entry{2021}%
 Best Reviewer Award, \textit{ISMIR 2021}
 
-\entry{2010-2017}%
+\entry{2010--2017}%
 Student Scholarship, \textit{German Academic Scholarship Foundation}
 
 \entry{2012}%
@@ -354,11 +385,11 @@ ERASMUS Scholarship (exchange semester), \textit{European Union}
 
 \section*{Memberships and Responsibilities}
 
-\entry{2019-2021}%
+\entry{2019--2021}%
 Student Representative\\
 \textit{Doctoral School of Digital Humanities}, \textsc{EPFL}
 
-\entry{2013-2014}%
+\entry{2013--2014}%
 Student Represtenative\\
 \textit{German Academic Scholarship Foundation}, \textsc{University of Paderborn}
 
@@ -400,10 +431,10 @@ Trombone\\
 10 years of lessons, including university level\\
 Experience in various jazz and classical ensembles, solo literature
 \begin{itemize}
-\item Minor during Bachelor (2011-2014)
-\item Musikakademie, German Academic Scholarship Foundation\\ (bass trombone, 2012-14, 2016-17)
-\item Landesjugendposaunenchor Westfalen Lippe (lead trombone, 2013-2019)
-\item Big Band Hochschule Osnabrück, Jazz Department (bass trombone, 2014-2015)
+\item Minor during Bachelor (2011--2014)
+\item Musikakademie, German Academic Scholarship Foundation\\ (bass trombone, 2012--14, 2016--17)
+\item Landesjugendposaunenchor Westfalen Lippe (lead trombone, 2013--2019)
+\item Big Band Hochschule Osnabrück, Jazz Department (bass trombone, 2014--2015)
 \end{itemize}
 
 \entry{since 2001}%
