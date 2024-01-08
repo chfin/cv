@@ -1,0 +1,105 @@
+\documentclass[10pt]{scrartcl}
+
+% page layout
+\usepackage[left=4cm,marginparwidth=3cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 1pt}
+\usepackage{multicol}
+
+\reversemarginpar
+\newcommand{\margintext}[1]{\marginpar{\raggedleft\small#1}}
+\newcommand{\entry}[1]{\vphantom{x}\margintext{#1}}
+
+% font and styling
+\usepackage{fontspec}
+\usepackage{fourier-otf}
+\linespread{1.1} % some extra leading for utopia fonts
+\setmonofont{Fira Mono}[Scale=MatchLowercase]
+\addtokomafont{disposition}{\rmfamily\mdseries}
+\usepackage{microtype}
+\usepackage{academicons}
+\usepackage{fontawesome}
+\usepackage{csquotes}
+\usepackage[all]{nowidow}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  breaklinks,
+  colorlinks,
+  linkcolor=Maroon,
+  urlcolor=Maroon,
+}
+
+% references
+\usepackage[backend=biber,style=authoryear,isbn=false,firstinits=true,maxcitenames=20]{biblatex}
+\patchcmd{\bibsetup}{\interlinepenalty=5000}{\interlinepenalty=10000}{}{}
+% \AtEveryBibitem{\clearfield{urlyear}}
+\addbibresource{publications.bib}
+
+\edef\authorhash{\detokenize{171275a917b0d3bc7583ce95db8c6663}}
+\renewcommand{\mkbibnamegiven}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnamefamily}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnameprefix}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+\renewcommand{\mkbibnamesuffix}[1]{%
+  \iffieldequals{hash}{\authorhash}{\mkbibbold{#1}}{#1}}
+
+\DeclareFieldFormat{doi}{%
+  \aiDoi\space
+  \ifhyperref
+    {\href{https://doi.org/#1}{\nolinkurl{#1}}}
+    {\nolinkurl{#1}}%
+}
+\DeclareFieldFormat{url}{%
+  \faLink\space\url{#1}}
+
+\begin{document}
+
+\section*{Christoph Finkensiep -- Publications}
+
+% TODO: CogSci Symposium
+
+\entry{forthcoming}%
+\fullcite{FinkensiepMusicTheoryModelDrivenaccepted}
+
+\fullcite{FinkensiepChordTypesOrnamentationsubmitted}
+
+\fullcite{FinkensiepModelingMelodyIndiansubmitted}
+
+\entry{2023}%
+\fullcite{FinkensiepRepetitionStructureInferenceFormal2023}
+
+\fullcite{NeuwirthMusicalSchemataModelling2023}
+
+\fullcite{CecchettiMusicCognitionTheory2023}
+
+\entry{2022}%
+\fullcite{CecchettiHearingfunctionalharmony2022}
+
+\entry{2021}%
+\fullcite{FinkensiepModelingInferringProtoVoice2021}
+
+\fullcite{HerffHierarchicalsyntacticstructure2021}
+
+\fullcite{HarasimMusicCognitionComplexity2021}
+
+\entry{2020}%
+\fullcite{FinkensiepVoiceLeadingSchemaRecognition2020}
+
+\fullcite{HarasimJazzHarmonyTreebank2020}
+
+\fullcite{Cecchettiexperiencemusicalstructure2020}
+
+\entry{2019}%
+\fullcite{FinkensiepModellingSyntaxNorth2019}
+
+\entry{2018}%
+\fullcite{FinkensiepGeneralizedSkipgramsPattern2018}
+
+\end{document}
+%%% Local Variables:
+%%% TeX-engine: luatex
+%%% End:

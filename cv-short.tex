@@ -1,0 +1,138 @@
+\documentclass[10pt]{scrartcl}
+
+% page layout
+\usepackage[top=2.5cm,bottom=1.5cm,
+left=4cm% ,right=2cm
+,marginparwidth=4cm]{geometry}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em plus 1pt}
+% \RedeclareSectionCommand[beforeskip={-\parskip}]{section}
+\usepackage{multicol}
+
+\reversemarginpar
+\newcommand{\margintext}[1]{\marginpar{\raggedleft\small#1}}
+\newcommand{\entry}[1]{\vphantom{x}\margintext{#1}}
+
+% font and styling
+\usepackage{fontspec}
+\usepackage{fourier-otf}
+\linespread{1.1} % some extra leading for utopia fonts
+\setmonofont{Fira Mono}[Scale=MatchLowercase]
+\addtokomafont{disposition}{\rmfamily\mdseries}
+\usepackage{microtype}
+\usepackage{academicons}
+\usepackage{fontawesome}
+\usepackage{csquotes}
+\usepackage[all]{nowidow}
+\usepackage{enumitem}
+
+\usepackage[svgnames]{xcolor}
+\usepackage{hyperref}
+\hypersetup{
+  breaklinks,
+  colorlinks,
+  linkcolor=Maroon,
+  urlcolor=Maroon,
+}
+
+\begin{document}
+
+% \raggedbottom
+% \widowpenalties 1 10000 % prevents paragraph breaking
+% \clubpenalties 1 10000
+
+
+\thispagestyle{empty}
+
+{\huge \textcolor{DimGray}{{{Christoph Finkensiep, PhD}}}}\\
+
+%\textit{PhD Candidate}
+
+\begin{minipage}[t]{0.6\linewidth}
+  Institute for Logic, Language and Computation (ILLC)\\
+  Faculty of Humanities\\
+  \textsc{University of Amsterdam}\\
+  Postbus 93058, 1090 BB Amsterdam\\
+  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:c.finkensiep@uva.nl}{c.finkensiep@uva.nl}\\
+  \parbox{1.2em}{\aiGoogleScholar} \href{https://scholar.google.com/citations?user=6m7SshUAAAAJ}{Google Scholar: Christoph Finkensiep}
+\end{minipage}
+\begin{minipage}[t]{0.4\linewidth}
+  Geldersekade 14A\\
+  1012 BH Amsterdam\\
+  \parbox{1.2em}{\faicon{phone}} 06 13555605\\
+  \parbox{1.2em}{\faicon{envelope-o}} \href{mailto:chfin@chfin.de}{chfin@chfin.de}\\
+  \parbox{1.2em}{\faicon{github}} \href{https://github.com/chfin/}{github.com/chfin}\\
+  \parbox{1.2em}{\aiOrcidSquare} \href{https://orcid.org/0000-0002-7002-6586}{orcid.org/0000-0002-7002-6586}
+\end{minipage}
+
+
+
+
+% \section*{Education}
+\section*{Work Experience}
+
+\entry{since Aug. 2023}\textbf{Assistant Professor} in Generative AI in the Arts\\
+\textsc{University of Amsterdam}, The Netherlands
+
+\entry{Feb. 2023 -- July 2023}\textbf{Postdoctoral Researcher}\\
+Digital and Cognitive Musicology Lab (DCML)\\
+\textsc{École Polytechnique Fédérale de Lausanne}, Switzerland
+
+\entry{2017}Student Assistant\\
+Dresden Music Cognition Lab\\
+\textsc{Technical University Dresden}
+
+\entry{2015 -- 2017}Director of Brass Ensemble\\
+\textsc{Protestant Church of Ladbergen}
+
+\entry{2013 -- 2014}Teaching Assistant, \textit{Introduction to Programming for Engineers}\\
+\textsc{University of Paderborn}
+
+\entry{2011 -- 12}Student Assistant\\
+Decision Support \& Operations Research Lab\\
+\textsc{University of Paderborn}
+
+\section*{Education}
+
+\entry{2017 -- 2023}\textbf{PhD} in Digital Humanities on \enquote{The Structure of Free Polyphony}\\
+\textsc{École Polytechnique Fédérale de Lausanne}, Switzerland
+
+\entry{2014 -- 2017}\textbf{M. Sc.} in Cognitive Science\\
+\textsc{University of Osnabrück}, Germany
+
+\entry{2010 -- 2014}\textbf{B. Sc.} in Computer Science\\
+\textsc{University of Paderborn}, Germany
+
+% \entry{Fall 2012}Exchange Semester\\
+% \textsc{University of Helsinki}, Finland
+
+% \entry{2010}\textbf{Abitur}\\
+% (German high-school diploma)\\
+% \textsc{Gymnasium Horn-Bad Meinberg}, Germany
+
+\section*{Skills}
+
+\begin{itemize}[leftmargin=0ex]
+\item Academic research in computational musicology, music cognition, music theory and related fields
+\item Teaching, student supervision, and project management
+\item Statistics, scientific writing, public speaking, and other academic skills
+\item Software development and programming in various languages and paradigms (Haskell, Python, Julia, etc.)
+\item German (native), English (fluent), French (basic)
+\end{itemize}
+
+% \section*{Scholarships and Awards}
+
+% \entry{2021}%
+% Best Reviewer Award, \textit{ISMIR 2021}
+
+% \entry{2010--2017}%
+% Student Scholarship, \textit{German Academic Scholarship Foundation}
+
+% \entry{2012}%
+% ERASMUS Scholarship, \textit{European Union}
+
+
+\end{document}
+%%% Local Variables:
+%%% TeX-engine: luatex
+%%% End:
